@@ -16,10 +16,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/test', (req,res)=>{
+    console.log('//////////////////////////')
     console.log('Request Headers:');
     console.log(req.headers);
     console.log('Request Body:');
-    console.log(req.body);
+    console.log(req.body+'\n');
     res.status(200).json(req.body);
 });
 
