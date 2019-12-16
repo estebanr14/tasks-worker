@@ -16,7 +16,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/test', (req,res)=>{
-    console.log('Request: ' + req.body);
+    console.log('Request received: \n');
+    console.log(req.body);
     res.json(req.body);
 });
 
